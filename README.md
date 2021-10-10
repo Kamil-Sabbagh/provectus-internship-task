@@ -206,4 +206,11 @@ telegram- 48746 kamil   20u  IPv4  360374      0t0  TCP kamil-Predator-G3-571:49
 telegram- 48746 kamil   22u  IPv4  743368      0t0  TCP kamil-Predator-G3-571:51806->149.154.167.92:https (ESTABLISHED)
 telegram- 48746 kamil   31u  IPv4 1112092      0t0  TCP kamil-Predator-G3-571:37970->149.154.167.50:https (ESTABLISHED)
 ```
-
+2)List process environment variables by given PID:
+```
+sudo cat /proc/`pgrep 'the process name'`/environ
+```
+3)Launch a python program my_program.py through CLI in the background. How would you close it after some period of time?
+Answer: 
+- we can use command: `s ax | grep my_program.py` to find the PID first.
+- then the command: `kill 'PID of process'` which will the process.
